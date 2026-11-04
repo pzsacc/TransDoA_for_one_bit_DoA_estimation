@@ -56,10 +56,10 @@ Miss (any source error > 5 deg): 0/100
 ```python
 import doa
 
-angles = doa.predict(X_re, X_im, k=3)            # single sample: (M, N) -> [K angles]
+angles = doa.predict(X_re, X_im, k=3)           # single sample: (M, N) -> [K angles]
 angles = doa.predict_batch(Xs_re, Xs_im, k=3)   # batched: (B, M, N) -> B x [K angles]
-grid = doa.steering_vector(...)                  # array geometry helper
-meta = doa.info()                                 # {"arch", "params", "active_params"}
+grid = doa.steering_vector(...)                 # array geometry helper
+meta = doa.info()                               # {"arch", "params", "active_params"}
 ```
 
 The interface is intentionally minimal: the packaged model is encapsulated behind `predict` / `predict_batch`; only angle estimates leave the interface.
