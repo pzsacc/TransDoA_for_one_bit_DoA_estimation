@@ -76,9 +76,11 @@ def run(theta, snr_db, trials, seed=42, device=None, verbose=True):
 def main():
     p = argparse.ArgumentParser(
         description="One-bit DOA inference demo (physics-informed transformer, v1.3)")
-    p.add_argument("--angles", default="-30.5,5.1,40.2",
-                   help="ground-truth angles in degrees, comma separated; "
-                        "the count sets the source number K (default: K=3)")
+    p.add_argument("--angles", nargs="+", type=float,
+                   default=[-30.5, 5.1, 40.2],
+                   help="ground-truth angles in degrees, space separated; "
+                        "the count sets the source number K "
+                        "(default: K=3 at -30.5 5.1 40.2)")
     p.add_argument("--snr", type=float, default=-6.0, help="SNR in dB (default: -6)")
     p.add_argument("--trials", type=int, default=100,
                    help="number of Monte-Carlo trials (default: 100)")
@@ -87,7 +89,7 @@ def main():
                    help="torch device (default: cuda if available)")
     args = p.parse_args()
 
-    theta = [float(a) for a in args.angles.split(",")]
+    theta = args.angles
     print(f"Config: M={M} ULA (lambda/2)  N={N} snapshots  K={len(theta)} sources  "
           f"SNR={args.snr} dB  grid [-45,45] deg @ 0.1  device={args.device}")
 
