@@ -97,6 +97,23 @@ source  run_pc_pyr_l1s4_l2s8 (final epoch 80, training set S=230400)
 sha256  08fe3f35110051721db37d8e4edd9c2d79868a26b8697ba87f1ed9f38d786202
 ```
 
+## Full Reproducibility Release
+
+The model in this repository is distributed as a packaged inference demo. **Upon publication of the paper, we will open-source the complete network implementation (including training code) together with the model weights of all ablation and main experiments, enabling full reproduction of every reported result.**
+
+## Citation
+
+If you find this work useful, please cite our paper:
+
+```bibtex
+@article{li2026onebit,
+  title   = {Efficient One-Bit DoA Estimation using Physics-Informed Transformer Network},
+  author  = {Li, Xiao-Peng and Zheng, Pingze and Huang, Lei and Shi, Zhang-Lei and Xu, Jingwei and So, Hing Cheung},
+  journal = {to be updated upon acceptance},
+  year    = {2026}
+}
+```
+
 ## License
 
 This project is released under the [MIT License](LICENSE).
