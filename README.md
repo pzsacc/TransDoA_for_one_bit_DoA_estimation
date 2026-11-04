@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 python inference.py                       # K=3 default scenario, SNR=-6 dB, 100 trials
 python inference.py --snr 0               # change SNR
-python inference.py --angles 10 25           # change source number / angles (K=2)
+python inference.py --angles 10 25        # change source number / angles (K=2)
 python inference.py --device cpu          # CPU only
 ```
 
