@@ -108,7 +108,7 @@ If you find this work useful, please cite our paper:
 ```bibtex
 @article{li2026onebit,
   title   = {Efficient One-Bit DoA Estimation using Physics-Informed Transformer Network},
-  author  = {Li, Xiao-Peng and Zheng, Pingze and Huang, Lei and Shi, Zhang-Lei and Xu, Jingwei and So, Hing Cheung},
+  author  = {Li, Xiao-Peng and Zheng, Ping-Ze and Huang, Lei and Shi, Zhang-Lei and Xu, Jingwei and So, Hing Cheung},
   journal = {to be updated upon acceptance},
   year    = {2026}
 }
